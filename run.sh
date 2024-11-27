@@ -12,7 +12,7 @@ echo "Installing dependencies..."
 pip install -U syftbox diffprivlib psutil pandas bs4 lxml --quiet
 echo "Dependencies installed."
 
-echo "Running 'Health Steps Counter - Member' with $(python3 --version) at '$(which python3)'"
+echo "Running 'Health Steps Counter - Aggregator' with $(python3 --version) at '$(which python3)'"
 python3 main.py
 
 deactivate
