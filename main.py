@@ -35,7 +35,7 @@ def network_participants(datasite_path: Path):
 def get_network_steps_mean(
     datasites_path: Path, 
     peers: list[str]
-) -> Tuple[float, list[str]]:
+):
     
     """Calculates the mean daily steps across network peers."""
     aggregated_step_count = {}
@@ -74,6 +74,7 @@ def get_network_steps_mean(
                     
                     
         except json.JSONDecodeError:
+            logging.warning(f"Could not decode JSON for peer {peer}")
             continue
         
         for key, value in aggregated_step_count.items():
